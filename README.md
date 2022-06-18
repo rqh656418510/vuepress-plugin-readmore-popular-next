@@ -10,7 +10,7 @@
 
 ## 文档
 
-- [官方中文文档](https://docs.techgrow.cn/v2/wechat/vuepress/)
+- [官方中文文档](https://docs.techgrow.cn/v2/wechat/vuepress2/)
 
 ## 特色功能
 
@@ -43,15 +43,28 @@
 
 ## 安装插件
 
+> 值得一提的是，插件只支持版本号大于等于 `v2.0.0-beta.48` 的 VuePress，若不满足要求，请务必先手动升级 VuePress 的版本。以插件版本号 `2.0.0-beta.48.x` 举例，其中的 `2.0.0-beta.48` 代表该插件兼容的 VuePress 版本号，而 `x` 则代表插件自身的修订版本号。
+
+- 查看插件所有的版本信息
+
+``` sh
+# 查看版本信息
+$ npm view vuepress-plugin-readmore-popular-next versions
+```
+
 - 运行 `npm install` 命令安装插件到本地博客
 
 ``` sh
+# 安装最新版本
 $ npm install -D vuepress-plugin-readmore-popular-next
+
+# 安装指定版本（推荐）
+$ npm install -D vuepress-plugin-readmore-popular-next@2.0.0-beta.48.2
 ```
 
 ## 配置 VuePress
 
-编辑 VuePress 的主配置文件（例如 `.vuepress/config.js`），新增插件的配置信息（请自行更改博客相关的信息），如下所示：
+编辑 VuePress 的主配置文件（例如 `.vuepress/config.ts`），新增插件的配置信息（请自行更改博客相关的信息），如下所示：
 
 ``` js
 const { readmorePlugin } = require('vuepress-plugin-readmore-popular-next')
@@ -195,7 +208,7 @@ module.exports = {
 
 ## 常见问题
 
-- [VuePress v2.x 引流问题](https://docs.techgrow.cn/v2/wechat/vuepress/#常见问题)
+- [VuePress v2.x 引流问题](https://docs.techgrow.cn/v2/wechat/vuepress2/#常见问题)
 
 ## 周边生态
 
