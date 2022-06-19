@@ -9,7 +9,7 @@
   ],
   "scripts": {
     "prepare": "npm run build",
-    "clean": "rm -rf lib *.tsbuildinfo",
+    "clean": "rimraf lib *.tsbuildinfo",
     "build": "tsc -b tsconfig.build.json"
   },
   "repository": {
@@ -35,11 +35,13 @@
     "@vuepress/client": "2.0.0-beta.48",
     "@vuepress/core": "2.0.0-beta.48",
     "@vuepress/utils": "2.0.0-beta.48",
+    "chalk": "^4.1.2",
     "node-match-path": "^0.6.3",
     "vue": "^3.2.33",
     "vue-router": "^4.0.15"
   },
   "devDependencies": {
+    "rimraf": "^3.0.2",
     "typescript": "^4.7.3"
   }
 }

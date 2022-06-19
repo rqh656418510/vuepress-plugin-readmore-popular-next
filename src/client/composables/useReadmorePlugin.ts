@@ -88,11 +88,21 @@ export const useReadmore = (): void => {
 
   onMounted(() => {
     const router = useRouter()
+    const loadedPages = new Set();
 
     // 监听路由变化
     router.afterEach((to) => {
-      loadPlugin();
-    })
+      // 解决在极短时间内，重复加载插件导致的性能问题
+      if (loadedPages.has(to.fullPath)) {
+        setTimeout(() => {
+          loadedPages.delete(to.fullPath);
+        }, 1000);
+      } else {
+        loadedPages.add(to.fullPath);
+        loadPlugin();
+      }
+    });
+
   })
 
 }
