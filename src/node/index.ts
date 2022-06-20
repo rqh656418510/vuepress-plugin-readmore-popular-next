@@ -1,4 +1,4 @@
-import { logger } from './utils'
+import { info } from './utils'
 import { path } from "@vuepress/utils";
 import type { Plugin } from "@vuepress/core";
 import type { ReadmoreOptions } from "../shared";
@@ -7,7 +7,7 @@ export * from "../shared";
 
 export const readmorePlugin = (options: ReadmoreOptions): Plugin =>
     (app) => {
-        logger('running...');
+        info('running...');
         return {
             name: "vuepress-plugin-readmore-popular2",
 
