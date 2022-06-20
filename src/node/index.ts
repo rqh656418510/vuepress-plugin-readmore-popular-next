@@ -7,7 +7,7 @@ export * from "../shared";
 
 export const readmorePlugin = (options: ReadmoreOptions): Plugin =>
     (app) => {
-        logger('running');
+        logger('running...');
         return {
             name: "vuepress-plugin-readmore-popular2",
 

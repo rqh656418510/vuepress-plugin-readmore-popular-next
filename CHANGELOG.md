@@ -1,3 +1,13 @@
+# (2022-06-20)
+
+### Version
+
+- 2.0.0-beta.48.4
+
+### Features
+
+- optimize log message output
+
 # (2022-06-19)
 
 ### Version
@@ -6,4 +16,5 @@
 
 ### Features
 
-- optimize code
+- output log message
+- optimize performance
