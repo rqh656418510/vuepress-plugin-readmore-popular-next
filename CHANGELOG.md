@@ -1,3 +1,13 @@
+# (2022-06-23)
+
+### Version
+
+- 2.0.0-beta.48.6
+
+### Features
+
+- add interval option
+
 # (2022-06-21)
 
 ### Version
