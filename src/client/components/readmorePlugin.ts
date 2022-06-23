@@ -10,7 +10,7 @@ import { insertJsCode } from "./loadResources";
  * @param qrcode 微信公众号二维码链接
  * @param random 随机导流的概率
  * @param lockToc 是否锁住文章目录
- * @param interval 校验凭证有效性的时间间隔（秒）
+ * @param interval 定时校验凭证有效性的时间间隔（秒）
  * @param expires 文章解锁后Token的有效天数
  * @param type 博客类型
  */

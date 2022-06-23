@@ -61,7 +61,7 @@ export interface ReadmoreOptions {
     reverse: boolean;
 
     /**
-     * 校验凭证有效性的时间间隔（秒）
+     * 定时校验凭证有效性的时间间隔（秒）
      */
     interval: number;
 
