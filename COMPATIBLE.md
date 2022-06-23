@@ -2,4 +2,4 @@
 
 | plugin version  | vuepress version | description |
 | --------------- | ---------------- | ----------- |
-| 2.0.0-beta.48.5 | 2.0.0-beta.48    |             |
+| 2.0.0-beta.48.6 | 2.0.0-beta.48    |             |
