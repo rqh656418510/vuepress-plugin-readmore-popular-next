@@ -20,6 +20,7 @@ const LIB_URL = options.libUrl || 'https://qiniu.techgrow.cn/readmore/dist/readm
 const CSS_URL = options.cssUrl || 'https://qiniu.techgrow.cn/readmore/dist/vuepress.css'
 const EXCLUDES = options.excludes || { strExp: [], regExp: [] }
 const REVERSE = options.reverse || false
+const INTERVAL = options.interval || 60
 const EXPIRES = options.expires || 365
 const TYPE = 'vuepress2'
 
@@ -75,7 +76,7 @@ function loadPlugin() {
       // 加载Readmore插件的JS文件
       loadJs(LIB_URL, 'readmore-js', () => {
         // 初始化Readmore插件
-        initPlugin(ID, BLOG_ID, NAME, KEYWORD, QR_CODE, RANDOM, LOCK_TOC, EXPIRES, TYPE);
+        initPlugin(ID, BLOG_ID, NAME, KEYWORD, QR_CODE, RANDOM, LOCK_TOC, INTERVAL, EXPIRES, TYPE);
       }, null)
     } else {
       console.warn('readmore plugin occurred error: not found article content by selector "' + SELECTOR + '"');
