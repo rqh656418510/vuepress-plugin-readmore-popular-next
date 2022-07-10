@@ -1,3 +1,13 @@
+# (2022-07-10)
+
+### Version
+
+- 2.0.0-beta.48.7
+
+### Features
+
+- add height option
+
 # (2022-06-23)
 
 ### Version

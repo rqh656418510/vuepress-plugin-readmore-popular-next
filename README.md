@@ -59,7 +59,7 @@ $ npm view vuepress-plugin-readmore-popular-next versions
 $ npm install -D vuepress-plugin-readmore-popular-next
 
 # 安装指定版本（推荐）
-$ npm install -D vuepress-plugin-readmore-popular-next@2.0.0-beta.48.6
+$ npm install -D vuepress-plugin-readmore-popular-next@2.0.0-beta.48.7
 ```
 
 ## 配置 VuePress
@@ -90,6 +90,8 @@ module.exports = {
       excludes: { strExp: [], regExp: [] },
       // 是否反转 URL 排除规则的配置，即只有符合排除规则的文章才会添加引流工具
       reverse: false,
+      // 文章内容的预览高度
+      height: 'auto',
       // 文章解锁后凭证的有效天数
       expires: 365,
       // 定时校验凭证有效性的时间间隔（秒）
@@ -114,6 +116,7 @@ module.exports = {
 | cssUrl   | String      | 否   | https://qiniu.techgrow.cn/readmore/dist/vuepress.css | -    |
 | excludes | Json Object | 否   | `{ strExp: [ ], regExp: [ ] }`                       | -    |
 | reverse  | Boolean     | 否   | `false`                                              | -    |
+| height   | String      | 否   | `auto`                                               | -    |
 | expires  | Number      | 否   | `365`                                                | -    |
 | interval | Number      | 否   | `60`                                                 | -    |
 | random   | Number      | 否   | `1`                                                  | -    |
