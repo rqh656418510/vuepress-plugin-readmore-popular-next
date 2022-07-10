@@ -71,6 +71,11 @@ export interface ReadmoreOptions {
     expires: number;
 
     /**
+     * 文章内容的预览高度
+     */
+    height: string;
+
+    /**
      * 博客的类型
      */
     type: string;

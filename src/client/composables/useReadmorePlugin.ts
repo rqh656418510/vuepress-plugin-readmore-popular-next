@@ -22,6 +22,7 @@ const EXCLUDES = options.excludes || { strExp: [], regExp: [] }
 const REVERSE = options.reverse || false
 const INTERVAL = options.interval || 60
 const EXPIRES = options.expires || 365
+const HEIGHT = options.height || 'auto'
 const TYPE = 'vuepress2'
 
 /**
@@ -76,7 +77,7 @@ function loadPlugin() {
       // 加载Readmore插件的JS文件
       loadJs(LIB_URL, 'readmore-js', () => {
         // 初始化Readmore插件
-        initPlugin(ID, BLOG_ID, NAME, KEYWORD, QR_CODE, RANDOM, LOCK_TOC, INTERVAL, EXPIRES, TYPE);
+        initPlugin(ID, BLOG_ID, NAME, KEYWORD, QR_CODE, RANDOM, LOCK_TOC, INTERVAL, EXPIRES, HEIGHT, TYPE);
       }, null)
     } else {
       console.warn('readmore plugin occurred error: not found article content by selector "' + SELECTOR + '"');

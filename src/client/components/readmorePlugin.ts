@@ -12,9 +12,10 @@ import { insertJsCode } from "./loadResources";
  * @param lockToc 是否锁住文章目录
  * @param interval 定时校验凭证有效性的时间间隔（秒）
  * @param expires 文章解锁后Token的有效天数
+ * @param height 文章内容的预览高度
  * @param type 博客类型
  */
-export function initPlugin(id: string, blogId: string, name: string, keyword: string, qrcode: string, random: number, lockToc: string, interval: number, expires: number, type: string) {
+export function initPlugin(id: string, blogId: string, name: string, keyword: string, qrcode: string, random: number, lockToc: string, interval: number, expires: number, height: string, type: string) {
     let code = `
     var regex = /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
     var isMobile = navigator.userAgent.match(regex);
@@ -39,6 +40,8 @@ export function initPlugin(id: string, blogId: string, name: string, keyword: st
             `interval: "` + interval + `",
             ` +
             `expires: "` + expires + `",
+            ` +
+            `height: "` + height + `",
             ` +
             `type: "` + type + `"`
               + `
