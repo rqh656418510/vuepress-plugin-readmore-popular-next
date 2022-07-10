@@ -105,21 +105,21 @@ module.exports = {
 
 ## 插件参数说明
 
-| 参数     | 类型        | 必填 | 默认值                                               | 说明 |
-| -------- | ----------- | ---- | ---------------------------------------------------- | ---- |
-| blogId   | String      | 是   | 无                                                   | -    |
-| name     | String      | 是   | 无                                                   | -    |
-| keyword  | String      | 是   | 无                                                   | -    |
-| qrcode   | String      | 是   | 无                                                   | -    |
-| selector | String      | 否   | `div.theme-default-content`                          | -    |
-| libUrl   | String      | 否   | https://qiniu.techgrow.cn/readmore/dist/readmore.js  | -    |
-| cssUrl   | String      | 否   | https://qiniu.techgrow.cn/readmore/dist/vuepress.css | -    |
-| excludes | Json Object | 否   | `{ strExp: [ ], regExp: [ ] }`                       | -    |
-| reverse  | Boolean     | 否   | `false`                                              | -    |
-| height   | String      | 否   | `auto`                                               | -    |
-| expires  | Number      | 否   | `365`                                                | -    |
-| interval | Number      | 否   | `60`                                                 | -    |
-| random   | Number      | 否   | `1`                                                  | -    |
+| 参数     | 类型            | 必填 | 默认值                                               | 说明 |
+| -------- | --------------- | ---- | ---------------------------------------------------- | ---- |
+| blogId   | String          | 是   | 无                                                   | -    |
+| name     | String          | 是   | 无                                                   | -    |
+| keyword  | String          | 是   | 无                                                   | -    |
+| qrcode   | String          | 是   | 无                                                   | -    |
+| selector | String          | 否   | `div.theme-default-content`                          | -    |
+| libUrl   | String          | 否   | https://qiniu.techgrow.cn/readmore/dist/readmore.js  | -    |
+| cssUrl   | String          | 否   | https://qiniu.techgrow.cn/readmore/dist/vuepress.css | -    |
+| excludes | Json Object     | 否   | `{ strExp: [ ], regExp: [ ] }`                       | -    |
+| reverse  | Boolean         | 否   | `false`                                              | -    |
+| height   | String / Number | 否   | `auto`                                               | -    |
+| expires  | Number          | 否   | `365`                                                | -    |
+| interval | Number          | 否   | `60`                                                 | -    |
+| random   | Number          | 否   | `1`                                                  | -    |
 
 `selector` 参数的作用是指定 JS 选择器来获取文章的主体内容，若 VuePress 使用了第三方主题，则一般需要根据第三方主题来配置该参数，否则可能会导致引流工具无法生效。其中 VuePress 不同主题的配置示例如下：
 
