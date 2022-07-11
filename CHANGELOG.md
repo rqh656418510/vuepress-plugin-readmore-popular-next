@@ -1,3 +1,13 @@
+# (2022-07-11)
+
+### Version
+
+- 2.0.0-beta.48.8
+
+### Fix
+
+- fix repeat invoke init function for readmore.js
+
 # (2022-07-10)
 
 ### Version
