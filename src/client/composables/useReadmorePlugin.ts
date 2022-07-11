@@ -25,11 +25,12 @@ const EXPIRES = options.expires || 365
 const HEIGHT = options.height || 'auto'
 const TYPE = 'vuepress2'
 
+// 使用引流插件
 export const useReadmore = (): void => {
 
   onMounted(() => {
     // 加载引流插件
-    loadReadmorePlugin(500);
+    loadReadmorePlugin(1000);
 
     // 监听路由变化
     const router = useRouter();

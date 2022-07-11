@@ -2,6 +2,16 @@
 
 ### Version
 
+- 2.0.0-beta.48.9
+
+### Fix
+
+- fix sometime not found dom element
+
+# (2022-07-11)
+
+### Version
+
 - 2.0.0-beta.48.8
 
 ### Fix
