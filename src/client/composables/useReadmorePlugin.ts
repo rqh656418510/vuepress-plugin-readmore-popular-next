@@ -5,7 +5,7 @@ import { initPlugin } from '../components/readmorePlugin'
 import { loadJs, loadCss } from "../components/loadResources";
 import type { ReadmoreOptions } from "../../shared";
 
-// 初始化插件的配置参数
+// 初始化引流插件的配置参数
 declare const __READMORE_OPTIONS__: ReadmoreOptions;
 const options = __READMORE_OPTIONS__;
 const ID = options.id || 'readmore-container'
@@ -25,10 +25,42 @@ const EXPIRES = options.expires || 365
 const HEIGHT = options.height || 'auto'
 const TYPE = 'vuepress2'
 
+export const useReadmore = (): void => {
+
+  onMounted(() => {
+    // 加载引流插件
+    loadReadmorePlugin(500);
+
+    // 监听路由变化
+    const router = useRouter();
+    router.afterEach((to, from) => {
+      var toPath = to.path;
+      var fromPath = from.path;
+      // 忽略带锚点的路由变化
+      if (toPath != fromPath) {
+        loadReadmorePlugin(500);
+      }
+    });
+
+  })
+
+}
+
 /**
- * 加载Readmore插件
+ * 
+ * 加载引流插件
  */
-function loadPlugin() {
+function loadReadmorePlugin(waitMills: number) {
+  // 利用定时器来保证可以正常操作DOM节点
+  setTimeout(() => {
+    updateReadmorePlugin();
+  }, waitMills);
+};
+
+/**
+ * 更新引流插件
+ */
+function updateReadmorePlugin() {
   // 排除指定的文章链接
   var path = window.location.pathname;
   var strExp = EXCLUDES.strExp;
@@ -65,46 +97,22 @@ function loadPlugin() {
   else if (!isExcluded && REVERSE) {
     return;
   }
-  // 加载Readmore插件
+  // 更新引流插件
   else {
     // 获取文章内容的DIV
     var divArr = document.querySelectorAll(SELECTOR);
     if (divArr && divArr.length > 0) {
       // 文章内容DIV设置ID
       divArr[0].id = ID;
-      // 加载Readmore插件的CSS文件
+      // 加载引流插件的CSS文件
       loadCss(CSS_URL, 'readmore-css');
-      // 加载Readmore插件的JS文件
+      // 加载引流插件的JS文件
       loadJs(LIB_URL, 'readmore-js', () => {
-        // 初始化Readmore插件
+        // 初始化引流插件
         initPlugin(ID, BLOG_ID, NAME, KEYWORD, QR_CODE, RANDOM, LOCK_TOC, INTERVAL, EXPIRES, HEIGHT, TYPE);
-      }, null)
+      }, null);
     } else {
       console.warn('readmore plugin occurred error: not found article content by selector "' + SELECTOR + '"');
     }
   }
-
-}
-
-export const useReadmore = (): void => {
-
-  onMounted(() => {
-    const router = useRouter()
-    const loadedPages = new Set();
-
-    // 监听路由变化
-    router.afterEach((to) => {
-      // 解决在极短时间内，重复加载插件导致的性能问题
-      if (loadedPages.has(to.fullPath)) {
-        setTimeout(() => {
-          loadedPages.delete(to.fullPath);
-        }, 1000);
-      } else {
-        loadedPages.add(to.fullPath);
-        loadPlugin();
-      }
-    });
-
-  })
-
 }
