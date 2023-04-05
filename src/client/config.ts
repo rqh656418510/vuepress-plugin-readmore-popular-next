@@ -1,8 +1,8 @@
 import { defineClientConfig } from '@vuepress/client'
-import { useReadmore } from './composables'
+import { useReadmorePlugin } from './composables/index.js'
 
 export default defineClientConfig({
     setup() {
-        useReadmore()
+        useReadmorePlugin()
     },
 })

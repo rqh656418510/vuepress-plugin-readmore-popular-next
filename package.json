@@ -2,6 +2,7 @@
   "name": "vuepress-plugin-readmore-popular-next",
   "version": "2.0.0-beta.48.9",
   "description": "为 VuePress 博客的每一篇文章都自动添加阅读更多的效果，关注公众号后方可解锁全站文章，从而将博客流量引流到微信公众号，达到涨粉丝数的目的。",
+  "type": "module",
   "main": "lib/node/index.js",
   "types": "lib/node/index.d.ts",
   "files": [
@@ -32,16 +33,16 @@
     "url": "https://github.com/rqh656418510/vuepress-plugin-readmore-popular-next/issues"
   },
   "dependencies": {
-    "@vuepress/client": "2.0.0-beta.48",
-    "@vuepress/core": "2.0.0-beta.48",
-    "@vuepress/utils": "2.0.0-beta.48",
-    "chalk": "^4.1.2",
+    "@vuepress/core": "2.0.0-beta.61",
+    "@vuepress/client": "2.0.0-beta.61",
+    "@vuepress/utils": "2.0.0-beta.61",
+    "vue-router": "^4.1.6",
+    "vue": "^3.2.47",
     "node-match-path": "^0.6.3",
-    "vue": "^3.2.33",
-    "vue-router": "^4.0.15"
+    "chalk": "^4.1.2"
   },
   "devDependencies": {
     "rimraf": "^3.0.2",
-    "typescript": "^4.7.3"
+    "typescript": "^4.9.5"
   }
 }

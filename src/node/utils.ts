@@ -1,4 +1,4 @@
-import * as chalk from 'chalk';
+import chalk from 'chalk';
 
 export const info = (msg, textColor = 'white', bgColor = 'bgBlue', label = 'READMORE PLUGIN') => {
     console.log(`${chalk.reset.bold[textColor][bgColor](` ${label} `)} ${msg}`);

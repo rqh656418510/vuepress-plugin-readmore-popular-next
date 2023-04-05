@@ -1,11 +1,13 @@
 {
-    "compilerOptions": {
-      "composite": true,
-      "lib": ["DOM", "ES2020"],
-      "moduleResolution": "Node",
-      "noEmitOnError": true,
-      "noImplicitAny": false,
-      "skipLibCheck": true,
-      "target": "ES2020"
-    }
+  "compilerOptions": {
+    "target": "ES2020",
+    "lib": ["DOM", "ESNext"],
+    "module": "ESNext",
+    "moduleResolution": "NodeNext",
+    "noEmitOnError": true,
+    "removeComments": true,
+    "noImplicitAny": false,
+    "skipLibCheck": true,
+    "composite": true
   }
+}

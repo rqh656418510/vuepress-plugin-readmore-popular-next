@@ -1,1 +1,1 @@
-export * from './useReadmorePlugin'
+export * from './loadPlugin.js'

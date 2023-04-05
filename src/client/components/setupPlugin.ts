@@ -1,7 +1,7 @@
-import { insertJsCode } from "./loadResources";
+import { insertJsCode } from "./loadResources.js"
 
 /**
- * 初始化Readmore插件
+ * 安装引流插件
  * 
  * @param id DIV的ID
  * @param blogId 博客ID
@@ -15,7 +15,7 @@ import { insertJsCode } from "./loadResources";
  * @param height 文章内容的预览高度
  * @param type 博客类型
  */
-export function initPlugin(id: string, blogId: string, name: string, keyword: string, qrcode: string, random: number, lockToc: string, interval: number, expires: number, height: string, type: string) {
+export function setup(id: string, blogId: string, name: string, keyword: string, qrcode: string, random: number, lockToc: string, interval: number, expires: number, height: string, type: string) {
     let code = `
     var regex = /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
     var isMobile = navigator.userAgent.match(regex);
@@ -50,6 +50,6 @@ export function initPlugin(id: string, blogId: string, name: string, keyword: st
         console.warn("readmore plugin occurred error: " +  e.name + " | " + e.message);
     }
     `;
-    // 添加初始化Readmore插件的JS代码
+    // 添加安装引流插件的JS代码
     insertJsCode(code, "readmore-init");
 }

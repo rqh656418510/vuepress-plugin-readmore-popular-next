@@ -1,3 +1,13 @@
+# (2023-04-05)
+
+### Version
+
+- 2.0.0-beta.61.1
+
+### Fix
+
+- compatible with the latest version of vuepress 2
+
 # (2022-07-11)
 
 ### Version

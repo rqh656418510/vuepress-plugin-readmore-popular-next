@@ -1,11 +1,12 @@
 import { onMounted } from 'vue'
 import { useRouter } from 'vue-router'
 import { match } from 'node-match-path';
-import { initPlugin } from '../components/readmorePlugin'
-import { loadJs, loadCss } from "../components/loadResources";
-import type { ReadmoreOptions } from "../../shared";
 
-// 初始化引流插件的配置参数
+import { setup } from '../components/setupPlugin.js'
+import { loadJs, loadCss } from "../components/loadResources.js";
+import type { ReadmoreOptions } from "../../shared/index.js";
+
+// 引流插件的配置参数
 declare const __READMORE_OPTIONS__: ReadmoreOptions;
 const options = __READMORE_OPTIONS__;
 const ID = options.id || 'readmore-container'
@@ -26,7 +27,7 @@ const HEIGHT = options.height || 'auto'
 const TYPE = 'vuepress2'
 
 // 使用引流插件
-export const useReadmore = (): void => {
+export const useReadmorePlugin = (): void => {
 
   onMounted(() => {
     // 加载引流插件
@@ -39,6 +40,7 @@ export const useReadmore = (): void => {
       var fromPath = from.path;
       // 忽略带锚点的路由变化
       if (toPath != fromPath) {
+        // 重新加载引流插件
         loadReadmorePlugin(500);
       }
     });
@@ -109,11 +111,12 @@ function updateReadmorePlugin() {
       loadCss(CSS_URL, 'readmore-css');
       // 加载引流插件的JS文件
       loadJs(LIB_URL, 'readmore-js', () => {
-        // 初始化引流插件
-        initPlugin(ID, BLOG_ID, NAME, KEYWORD, QR_CODE, RANDOM, LOCK_TOC, INTERVAL, EXPIRES, HEIGHT, TYPE);
+        // 安装引流插件
+        setup(ID, BLOG_ID, NAME, KEYWORD, QR_CODE, RANDOM, LOCK_TOC, INTERVAL, EXPIRES, HEIGHT, TYPE);
       }, null);
     } else {
       console.warn('readmore plugin occurred error: not found article content by selector "' + SELECTOR + '"');
     }
   }
+
 }
