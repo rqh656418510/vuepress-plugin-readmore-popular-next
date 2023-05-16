@@ -25,6 +25,7 @@ const INTERVAL = options.interval || 60
 const EXPIRES = options.expires || 365
 const HEIGHT = options.height || 'auto'
 const TYPE = 'vuepress2'
+const BASEURL = options.baseUrl || ''
 
 // 使用引流插件
 export const useReadmorePlugin = (): void => {
@@ -112,7 +113,7 @@ function updateReadmorePlugin() {
       // 加载引流插件的JS文件
       loadJs(LIB_URL, 'readmore-js', () => {
         // 安装引流插件
-        setup(ID, BLOG_ID, NAME, KEYWORD, QR_CODE, RANDOM, LOCK_TOC, INTERVAL, EXPIRES, HEIGHT, TYPE);
+        setup(ID, BLOG_ID, NAME, KEYWORD, QR_CODE, RANDOM, LOCK_TOC, INTERVAL, EXPIRES, HEIGHT, TYPE, BASEURL);
       }, null);
     } else {
       console.warn('readmore plugin occurred error: not found article content by selector "' + SELECTOR + '"');

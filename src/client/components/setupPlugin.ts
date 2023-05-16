@@ -14,8 +14,9 @@ import { insertJsCode } from "./loadResources.js"
  * @param expires 文章解锁后Token的有效天数
  * @param height 文章内容的预览高度
  * @param type 博客类型
+ * @param baseUrl 后端服务的地址
  */
-export function setup(id: string, blogId: string, name: string, keyword: string, qrcode: string, random: number, lockToc: string, interval: number, expires: number, height: string, type: string) {
+export function setup(id: string, blogId: string, name: string, keyword: string, qrcode: string, random: number, lockToc: string, interval: number, expires: number, height: string, type: string, baseUrl: string) {
     let code = `
     var regex = /(phone|pad|pod|iPhone|iPod|ios|iPad|Android|Mobile|BlackBerry|IEMobile|MQQBrowser|JUC|Fennec|wOSBrowser|BrowserNG|WebOS|Symbian|Windows Phone)/i
     var isMobile = navigator.userAgent.match(regex);
@@ -43,7 +44,9 @@ export function setup(id: string, blogId: string, name: string, keyword: string,
             ` +
             `height: "` + height + `",
             ` +
-            `type: "` + type + `"`
+            `type: "` + type + `",
+            ` +
+            `baseUrl: "` + baseUrl + `"`
               + `
         });
     } catch (e) {

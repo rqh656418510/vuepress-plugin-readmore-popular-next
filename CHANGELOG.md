@@ -1,3 +1,13 @@
+# (2023-05-16)
+
+### Version
+
+- 2.0.0-beta.61.2
+
+### Features
+
+- support open api
+
 # (2023-04-05)
 
 ### Version

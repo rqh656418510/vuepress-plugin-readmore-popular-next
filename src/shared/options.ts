@@ -83,4 +83,9 @@ export interface ReadmoreOptions {
      */
     type?: string;
 
+    /**
+     * 后端服务的地址
+     */
+    baseUrl?: string;
+
 }
