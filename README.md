@@ -224,6 +224,7 @@ module.exports = {
 
 - [Hexo 引流插件](https://github.com/rqh656418510/hexo-readmore)
 - [VuePress 1 引流插件](https://github.com/rqh656418510/vuepress-plugin-readmore-popular)
+- [基于开放引流 API 的 Java 后端项目](https://github.com/rqh656418510/techgrow-openapi-java)
 
 ## 开发计划
 
