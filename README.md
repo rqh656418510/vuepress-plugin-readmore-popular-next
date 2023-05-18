@@ -10,7 +10,7 @@
 
 ## 文档
 
-- [官方中文文档](https://docs.techgrow.cn/v2/wechat/tutorial/vuepress2/)
+- [官方中文文档](https://docs.techgrow.cn/v1/wechat/tutorial/vuepress2/)
 
 ## 特色功能
 
