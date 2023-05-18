@@ -6,7 +6,7 @@
 [![dm-image]][npm-url]
 [![dt-image]][npm-url]
 
-> VuePress 2 微信公众号引流插件，将免费的公众号引流工具整合到博客中，用户扫码关注公众号后才可以解锁文章，从而将博客流量引流到公众号，达到涨粉丝数的目的。
+> VuePress v2 微信公众号引流插件，将免费的公众号引流工具整合到博客中，用户扫码关注公众号后才可以解锁文章，从而将博客流量引流到公众号，达到涨粉丝数的目的。
 
 ## 文档
 
@@ -218,12 +218,12 @@ module.exports = {
 
 ## 常见问题
 
-- [VuePress 2 引流问题](https://docs.techgrow.cn/v2/wechat/tutorial/vuepress2/#常见问题)
+- [VuePress v2 引流问题](https://docs.techgrow.cn/v2/wechat/tutorial/vuepress2/#常见问题)
 
 ## 周边生态
 
 - [Hexo 引流插件](https://github.com/rqh656418510/hexo-readmore)
-- [VuePress 1 引流插件](https://github.com/rqh656418510/vuepress-plugin-readmore-popular)
+- [VuePress v1 引流插件](https://github.com/rqh656418510/vuepress-plugin-readmore-popular)
 - [基于开放引流 API 的 Java 后端项目](https://github.com/rqh656418510/techgrow-openapi-java)
 
 ## 开发计划
