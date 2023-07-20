@@ -33,9 +33,9 @@
     "url": "https://github.com/rqh656418510/vuepress-plugin-readmore-popular-next/issues"
   },
   "dependencies": {
-    "@vuepress/core": "2.0.0-beta.64",
-    "@vuepress/client": "2.0.0-beta.64",
-    "@vuepress/utils": "2.0.0-beta.64",
+    "@vuepress/core": "2.0.0-beta.65",
+    "@vuepress/client": "2.0.0-beta.65",
+    "@vuepress/utils": "2.0.0-beta.65",
     "vue-router": "^4.1.6",
     "vue": "^3.2.47",
     "node-match-path": "^0.6.3",
