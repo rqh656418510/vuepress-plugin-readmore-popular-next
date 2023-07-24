@@ -87,5 +87,10 @@ export interface ReadmoreOptions {
      * 后端服务的地址
      */
     baseUrl?: string;
+    
+    /**
+     * 移动端是否启用引流
+     */
+    allowMobile?: boolean;
 
 }

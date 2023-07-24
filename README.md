@@ -61,7 +61,7 @@ $ npm view vuepress-plugin-readmore-popular-next versions
 $ npm install -D vuepress-plugin-readmore-popular-next
 
 # 安装指定版本（推荐）
-$ npm install -D vuepress-plugin-readmore-popular-next@2.0.0-beta.66.1
+$ npm install -D vuepress-plugin-readmore-popular-next@2.0.0-beta.66.2
 ```
 
 ## 配置 VuePress
@@ -92,6 +92,8 @@ module.exports = {
       excludes: { strExp: [], regExp: [] },
       // 是否反转 URL 排除规则的配置，即只有符合排除规则的文章才会添加引流工具
       reverse: false,
+      // 移动端的页面是否添加微信公众号引流工具
+      allowMobile: false,
       // 文章内容的预览高度(例如 300)
       height: 'auto',
       // 文章解锁后凭证的有效天数

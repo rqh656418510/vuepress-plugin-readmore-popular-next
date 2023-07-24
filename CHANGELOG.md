@@ -1,3 +1,13 @@
+# (2023-07-24)
+
+### Version
+
+- 2.0.0-beta.66.2
+
+### Features
+
+- add switches to the mobile
+
 # (2023-07-19)
 
 ### Version
