@@ -1,3 +1,13 @@
+# (2023-11-21)
+
+### Version
+
+- 2.0.0-beta.68.1
+
+### Features
+
+- compatible with vuepress 2.0.0-beta.68
+
 # (2023-11-20)
 
 ### Version
