@@ -27,13 +27,14 @@ const HEIGHT = options.height || 'auto'
 const TYPE = 'vuepress2'
 const BASEURL = options.baseUrl || ''
 const ALLOW_MOBILE = options.allowMobile || false
+const WAIT_DOM_MILLS = options.waitDomMills || 1000
 
 // 使用引流插件
 export const useReadmorePlugin = (): void => {
 
   onMounted(() => {
     // 加载引流插件
-    loadReadmorePlugin(1000);
+    loadReadmorePlugin(WAIT_DOM_MILLS);
 
     // 监听路由变化
     const router = useRouter();
@@ -43,7 +44,7 @@ export const useReadmorePlugin = (): void => {
       // 忽略带锚点的路由变化
       if (toPath != fromPath) {
         // 重新加载引流插件
-        loadReadmorePlugin(500);
+        loadReadmorePlugin(WAIT_DOM_MILLS);
       }
     });
 
@@ -52,8 +53,8 @@ export const useReadmorePlugin = (): void => {
 }
 
 /**
- * 
  * 加载引流插件
+ * @param waitMills 等待 DOM 节点加载完成的时间（毫秒）
  */
 function loadReadmorePlugin(waitMills: number) {
   // 利用定时器来保证可以正常操作DOM节点

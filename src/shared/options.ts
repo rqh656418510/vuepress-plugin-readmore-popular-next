@@ -93,4 +93,9 @@ export interface ReadmoreOptions {
      */
     allowMobile?: boolean;
 
+    /**
+     * 等待 DOM 节点加载完成的时间（毫秒）
+     */
+    waitDomMills?: number;
+
 }
