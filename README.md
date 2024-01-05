@@ -61,7 +61,7 @@ $ npm view vuepress-plugin-readmore-popular-next versions
 $ npm install -D vuepress-plugin-readmore-popular-next
 
 # 安装指定版本（推荐）
-$ npm install -D vuepress-plugin-readmore-popular-next@2.0.0-rc.0.1
+$ npm install -D vuepress-plugin-readmore-popular-next@2.0.0-rc.0.2
 ```
 
 ## 配置 VuePress
@@ -100,6 +100,8 @@ module.exports = {
       expires: 365,
       // 定时校验凭证有效性的时间间隔（秒）
       interval: 60,
+      // 等待 DOM 节点加载完成的时间（毫秒），如果部分页面的引流功能无法生效，可适当增大此参数的值
+      waitDomMills: 1000,
       // 每篇文章随机添加引流工具的概率，有效范围在 0.1 ~ 1 之间，1 则表示所有文章默认都自动添加引流工具
       random: 1
     })
