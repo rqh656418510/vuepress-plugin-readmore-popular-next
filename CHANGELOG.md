@@ -1,3 +1,13 @@
+# (2024-03-23)
+
+### Version
+
+- 2.0.0-rc.8.2
+
+### Fix
+
+- fix sometime readmore plugin not work
+
 # (2024-03-15)
 
 ### Version
