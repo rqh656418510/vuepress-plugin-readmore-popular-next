@@ -1,5 +1,5 @@
 import { onMounted } from 'vue'
-import { useRouter } from 'vuepress/client'
+import { useRouter } from '@vuepress/client'
 import { match } from 'node-match-path';
 
 import { setup } from '../components/setupPlugin.js'
@@ -38,17 +38,15 @@ export const useReadmorePlugin = (): void => {
 
     // 监听路由变化
     const router = useRouter();
-    if (router) {
-      router.afterEach((to, from) => {
-        var toPath = to.path;
-        var fromPath = from.path;
-        // 忽略带锚点的路由变化
-        if (toPath != fromPath) {
-          // 重新加载引流插件
-          loadReadmorePlugin(WAIT_DOM_MILLS);
-        }
-      });
-    }
+    router.afterEach((to, from) => {
+      var toPath = to.path;
+      var fromPath = from.path;
+      // 忽略带锚点的路由变化
+      if (toPath != fromPath) {
+        // 重新加载引流插件
+        loadReadmorePlugin(WAIT_DOM_MILLS);
+      }
+    });
   })
 
 }
