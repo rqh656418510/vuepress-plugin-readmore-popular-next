@@ -1,13 +1,13 @@
 {
   "compilerOptions": {
-    "target": "ES2020",
-    "lib": ["DOM", "ESNext"],
+    "allowSyntheticDefaultImports": true,
+    "lib": ["DOM", "ES2022"],
     "module": "ESNext",
-    "moduleResolution": "NodeNext",
+    "moduleResolution": "Bundler",
     "noEmitOnError": true,
-    "removeComments": true,
     "noImplicitAny": false,
     "skipLibCheck": true,
-    "composite": true
+    "removeComments": true,
+    "target": "ES2022"
   }
 }

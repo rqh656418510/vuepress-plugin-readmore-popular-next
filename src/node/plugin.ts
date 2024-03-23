@@ -1,7 +1,6 @@
+import { info } from './utils.js'
 import type { Plugin } from "@vuepress/core";
 import { path, getDirname } from "@vuepress/utils";
-
-import { info } from './utils.js'
 import type { ReadmoreOptions } from "../shared/index.js";
 
 const __dirname = getDirname(import.meta.url);
