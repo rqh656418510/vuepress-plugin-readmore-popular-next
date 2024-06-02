@@ -33,16 +33,16 @@
     "url": "https://github.com/rqh656418510/vuepress-plugin-readmore-popular-next/issues"
   },
   "dependencies": {
-    "@vuepress/client": "2.0.0-rc.8",
-    "@vuepress/core": "2.0.0-rc.8",
-    "@vuepress/utils": "2.0.0-rc.8",
-    "vue": "3.4.21",
-    "vue-router": "4.3.0",
+    "@vuepress/client": "2.0.0-rc.9",
+    "@vuepress/core": "2.0.0-rc.9",
+    "@vuepress/utils": "2.0.0-rc.9",
+    "vue": "3.4.27",
+    "vue-router": "4.3.2",
     "chalk": "4.1.2",
     "node-match-path": "0.6.3"
   },
   "devDependencies": {
     "rimraf": "5.0.5",
-    "typescript": "5.4.3"
+    "typescript": "5.4.5"
   }
 }
