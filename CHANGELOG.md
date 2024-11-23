@@ -1,3 +1,13 @@
+# (2024-11-03)
+
+### Version
+
+- 2.0.0-rc.14.1
+
+### Features
+
+- compatible with vuepress 2.0.0-rc.14
+
 # (2024-06-03)
 
 ### Version
