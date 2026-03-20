@@ -47,7 +47,7 @@
 
 ## 安装插件
 
-> 值得一提的是，以引流插件版本号 `2.0.0-rc.21.x` 举例，其中的 `2.0.0-rc.21` 代表该引流插件所兼容的 VuePress 版本，而 `x` 则代表引流插件自身的修订版本号。若 VuePress 与引流插件的版本不兼容，很可能会导致编译出错或者引流插件无法生效。
+> 值得一提的是，以引流插件版本号 `2.0.0-rc.22.x` 举例，其中的 `2.0.0-rc.22` 代表该引流插件所兼容的 VuePress 版本，而 `x` 则代表引流插件自身的修订版本号。若 VuePress 与引流插件的版本不兼容，很可能会导致编译出错或者引流插件无法生效。
 
 - 查看插件所有的版本信息
 
@@ -63,7 +63,7 @@ $ npm view vuepress-plugin-readmore-popular-next versions
 $ npm install -D vuepress-plugin-readmore-popular-next
 
 # 安装指定版本（推荐）
-$ npm install -D vuepress-plugin-readmore-popular-next@2.0.0-rc.21.1
+$ npm install -D vuepress-plugin-readmore-popular-next@2.0.0-rc.22.1
 ```
 
 ## 配置 VuePress
@@ -85,7 +85,7 @@ module.exports = {
       // 已申请的微信公众号二维码链接
       qrcode: 'https://www.techgrow.cn/img/wx_mp_qr.png',
       // 文章内容的 JS 选择器，若使用的不是官方默认主题，则需要根据第三方的主题来设置
-      selector: 'div.theme-default-content',
+      selector: 'div[vp-content]',
       // 自定义的 JS 资源链接，可用于 CDN 加速
       libUrl: 'https://qiniu.techgrow.cn/readmore/dist/readmore.js',
       // 自定义的 CSS 资源链接，可用于适配不同风格的博客
@@ -119,7 +119,7 @@ module.exports = {
 | name         | String          | 是   | 无                                                     | -    |
 | keyword      | String          | 是   | 无                                                     | -    |
 | qrcode       | String          | 是   | 无                                                     | -    |
-| selector     | String          | 否   | `div.theme-default-content`                            | -    |
+| selector     | String          | 否   | `div[vp-content]`                                      | -    |
 | libUrl       | String          | 否   | `https://qiniu.techgrow.cn/readmore/dist/readmore.js`  | -    |
 | cssUrl       | String          | 否   | `https://qiniu.techgrow.cn/readmore/dist/vuepress.css` | -    |
 | excludes     | Json Object     | 否   | `{ strExp: [ ], regExp: [ ] }`                         | -    |
@@ -133,10 +133,10 @@ module.exports = {
 
 `selector` 参数的作用是指定 JS 选择器来获取文章的主体内容，若 VuePress 使用了第三方主题，则通常需要根据第三方主题来配置该参数，否则可能会导致引流工具无法生效。其中 VuePress 不同主题的配置示例如下（**特别注意，随着主题的迭代开发，以下配置可能会过时失效，请根据最新的主题代码来配置**）：
 
-| 主题                                                                                              | 插件配置                                | 备注         |
-| ------------------------------------------------------------------------------------------------- | --------------------------------------- | ------------ |
-| [@vuepress/theme-vue](https://github.com/vuejs/vuepress/tree/master/packages/@vuepress/theme-vue) | `selector: 'div.theme-default-content'` | 官方默认主题 |
-| [vuepress-theme-hope](https://github.com/vuepress-theme-hope/vuepress-theme-hope)                 | `selector: 'div.theme-hope-content'`    | 第三方主题   |
+| 主题                                                                                              | 插件配置                      | 备注         |
+| ------------------------------------------------------------------------------------------------- | ----------------------------- | ------------ |
+| [@vuepress/theme-vue](https://github.com/vuejs/vuepress/tree/master/packages/@vuepress/theme-vue) | `selector: 'div[vp-content]'` | 官方默认主题 |
+| [vuepress-theme-hope](https://github.com/vuepress-theme-hope/vuepress-theme-hope)                 | `selector: 'div[vp-content]'` | 第三方主题   |
 
 > 若不清楚如何指定 JS 选择器，则可以打开博客的任意一篇文章，利用 Chrome 等浏览器的元素审查功能，找到文章页面中文章主体的 `div` 标签，最后定位得到 `div` 标签的 CSS 类即可（例如 `theme-default-content`），[点击查看](https://raw.githubusercontent.com/rqh656418510/vuepress-plugin-readmore-popular-next/main/screenshot/ggmr7dg23fjj3mqndyays04ok93adj3n.png)详细的操作图解。
 
