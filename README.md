@@ -133,10 +133,10 @@ module.exports = {
 
 `selector` 参数的作用是指定 JS 选择器来获取文章的主体内容，若 VuePress 使用了第三方主题，则通常需要根据第三方主题来配置该参数，否则可能会导致引流工具无法生效。其中 VuePress 不同主题的配置示例如下（**特别注意，随着主题的迭代开发，以下配置可能会过时失效，请根据最新的主题代码来配置**）：
 
-| 主题                                                                                              | 新版本主题的插件配置          | 旧版本主题的插件配置                    | 备注         |
-| ------------------------------------------------------------------------------------------------- | ----------------------------- | --------------------------------------- | ------------ |
-| [@vuepress/theme-vue](https://github.com/vuejs/vuepress/tree/master/packages/@vuepress/theme-vue) | `selector: 'div[vp-content]'` | `selector: 'div.theme-default-content'` | 官方默认主题 |
-| [vuepress-theme-hope](https://github.com/vuepress-theme-hope/vuepress-theme-hope)                 | `selector: 'div[vp-content]'` | `selector: 'div.theme-hope-content'`    | 第三方主题   |
+| 主题                                                                                            | 新版本主题的插件配置          | 旧版本主题的插件配置                    | 备注         |
+| ----------------------------------------------------------------------------------------------- | ----------------------------- | --------------------------------------- | ------------ |
+| [@vuepress/theme-default](https://github.com/vuepress/ecosystem/tree/main/themes/theme-default) | `selector: 'div[vp-content]'` | `selector: 'div.theme-default-content'` | 官方默认主题 |
+| [vuepress-theme-hope](https://github.com/vuepress-theme-hope/vuepress-theme-hope)               | `selector: 'div[vp-content]'` | `selector: 'div.theme-hope-content'`    | 第三方主题   |
 
 > 若不清楚如何指定 JS 选择器，则可以打开博客的任意一篇文章，利用 Chrome 等浏览器的元素审查功能，找到文章页面中文章主体的 `div` 标签，最后定位得到 `div` 标签的属性（例如 `vp-content`）或者 CSS 类即可（例如 `theme-default-content`），[点击查看](https://raw.githubusercontent.com/rqh656418510/vuepress-plugin-readmore-popular-next/main/screenshot/ggmr7dg23fjj3mqndyays04ok93adj3n.png)详细的操作图解。
 
